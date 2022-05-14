@@ -1,4 +1,4 @@
-_________Transformadores__________
+### Transformadores
 
 - pop() -> elimina el último elemento de un array y lo devuelve
 - shift() -> elimina el primer elemento de un array y lo devuelve
@@ -10,14 +10,14 @@ _________Transformadores__________
 
 
 
-__________Accesores______________
+### Accesores
 
 - join() -> une todos los elementos de una matriz (u objeto similar) en una cadena y la devuelve
 - slice() -> devuelve una parte del array dentro de un nuevo array empezando por inicio hasta fin (fin no incluido)
 - Metodos ya vistos en cadenas: toString(), indexOf(),
 
 
-_________De Repetición____________
+### De Repetición
 
 - filter() -> crea un nuevo array con todo los elementos
 - forEach() -> ejecuta la función indicada una vez por cada

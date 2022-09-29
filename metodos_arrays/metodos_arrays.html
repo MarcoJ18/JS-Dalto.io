@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,72 +10,88 @@
     <link rel="stylesheet" href="metodos_arrays.css">
     <link rel="icon" href="../img/Unofficial_JavaScript_logo_2.svg.png" type="image/x-icon" />
 </head>
+
 <body>
     <!--<button onclick="popA()">Click</button>-->
-<h1>Transformadores</h1>
-<div class="main">
-    <div>
-        <h1>Pop</h1>
-        <button onclick="popTest()">Example</button>
+    <h1>Transformadores</h1>
+    <div class="main">
+        <div>
+            <h1>Pop</h1>
+            <button onclick="popTest()">Example</button>
+            <code>let popTest = () =>{
+            let nombres = ['pedro','paco','maria'];
+        
+            document.write('<b>Original: </b>' + nombres + '<br>');
+        
+            let resultado = nombres.pop(); // Remueve el ultimo y lo devuele
+        
+            document.write('<b>POP: </b>' + resultado + '<br>');
+        
+            document.write('<b>Resultado: </b>' + nombres);
+        
+        }
+        </code>
+        </div>
+        <div>
+            <h1>Shift</h1>
+            <button onclick="shiftTest()">Example</button>
+        </div>
+        <div>
+            <h1>Push</h1>
+            <button onclick="pushTest()">Example</button>
+        </div>
+        <div>
+            <h1>Reverse</h1>
+            <button onclick="reverseTest()">Example</button>
+        </div>
+        <div>
+            <h1>Unshift</h1>
+            <button onclick="unshiftTest()">Example</button>
+        </div>
+        <div>
+            <h1>Sort</h1>
+            <button onclick="sortTest()">Example</button>
+        </div>
+        <div>
+            <h1>Splice</h1>
+            <button onclick="spliceTest()">Example</button>
+        </div>
     </div>
-    <div>
-        <h1>Shift</h1>
-        <button onclick="shiftTest()">Example</button>
-    </div>
-    <div>
-        <h1>Push</h1>
-        <button onclick="pushTest()">Example</button>
-    </div>
-    <div>
-        <h1>Reverse</h1>
-        <button onclick="reverseTest()">Example</button> 
-    </div>
-    <div>
-        <h1>Unshift</h1>
-        <button onclick="unshiftTest()">Example</button> 
-    </div>
-    <div>
-        <h1>Sort</h1>
-        <button onclick="sortTest()">Example</button> 
-    </div>
-    <div>
-        <h1>Splice</h1>
-        <button onclick="spliceTest()">Example</button> 
-    </div>
-</div>
 
-<h1>Accesores</h1>
-<div class="main">
-    <div>
-        <h1>Join</h1>
-        <button onclick="joinTest()">Example</button>
+    <h1>Accesores</h1>
+    <div class="main">
+        <div>
+            <h1>Join</h1>
+            <button onclick="joinTest()">Example</button>
+        </div>
+        <div>
+            <h1>Slice</h1>
+            <button onclick="sliceTest()">Example</button>
+        </div>
+        <div>
+            <h1>Otros</h1>
+            <button onclick="otrosTest()">Example</button>
+        </div>
     </div>
-    <div>
-        <h1>Slice</h1>
-        <button onclick="sliceTest()">Example</button>
-    </div>
-    <div>
-        <h1>Otros</h1>
-        <button onclick="otrosTest()">Example</button>
-    </div>
-</div>
 
-<h1>De Repetición</h1>
-<div class="main">
-    <div>
-        <h1>Filter</h1>
-        <button onclick="filterTest()">Example</button>
+    <h1>De Repetición</h1>
+    <div class="main">
+        <div>
+            <h1>Filter</h1>
+            <button onclick="filterTest()">Example</button>
+        </div>
+        <div>
+            <h1>ForEach</h1>
+            <button onclick="forEachTest()">Example</button>
+        </div>
+        <div>
+            <h1>Map</h1>
+            <button onclick="mapTest()">Example</button>
+        </div>
     </div>
-    <div>
-        <h1>ForEach</h1>
-        <button onclick="forEachTest()">Example</button>
-    </div>
-    <div>
-        <h1>Map</h1>
-        <button onclick="mapTest()">Example</button>
-    </div>
-</div>
 
-<script src="metodos_arrays.js"></script> <!--Es mejor ponerlo al final ya que asi carga primero la pagina y luego el script-->
+    <script src="metodos_arrays.js"></script>
+    <!--Es mejor ponerlo al final ya que asi carga primero la pagina y luego el script-->
 </body>
-</html> 
+
+</html>

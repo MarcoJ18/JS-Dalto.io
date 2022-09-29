@@ -40,5 +40,14 @@ popTest();
 
 
 
+<code class="hljs language-javascript"><span class="hljs-keyword">var</span> word2value = {
+       <span class="hljs-attr">red</span>: {<span class="hljs-string">"hex"</span>:<span class="hljs-string">"#FF0000"</span>,<span class="hljs-string">"rgb"</span>:<span class="hljs-string">"255,0,0"</span>},
+       <span class="hljs-comment">/* ... all other values */</span>
+}
 
+<span class="hljs-keyword">var</span> value2word = {
+       <span class="hljs-string">"FF0000"</span> : <span class="hljs-string">"red"</span>,
+       <span class="hljs-string">"255,0,0"</span>: <span class="hljs-string">"red"</span>
+}
+</code>
 

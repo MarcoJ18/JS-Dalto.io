@@ -1,0 +1,45 @@
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.code img{
+    max-width: 100%;
+    min-width: none;
+}
+
+.debug{
+    border: #f32 solid 1px;
+    padding: 3%;
+    color: #222;
+    margin-top: 10px;
+
+}
+
+.red{
+    color: #f32;
+}
+
+.yellow{
+    color: #ee4;
+}
+
+.purple{
+    color: #99f;
+}
+
+.blue{
+    color: #3df;
+}
+
+.green{
+    color: #2f3;
+}
+
+.orange {
+    color: orange;
+}
+

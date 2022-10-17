@@ -1,4 +1,4 @@
-const modalBody = document.querySelector('.test');
+const modalBody = document.querySelector('.hola');
 
 let popTest = () =>{
     let nombres = ['pedro','paco','maria'];

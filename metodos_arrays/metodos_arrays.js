@@ -1,13 +1,15 @@
+const modalBody = document.querySelector('.test');
+
 let popTest = () =>{
     let nombres = ['pedro','paco','maria'];
 
-    document.write('<b>Original: </b>' + nombres + '<br>');
+    modalBody.innerHTML += '<b>Original: </b>' + nombres + '<br>';
 
     let resultado = nombres.pop(); // Remueve el ultimo y lo devuele
 
-    document.write('<b>POP: </b>' + resultado + '<br>');
+    modalBody.innerHTML += '<b>POP: </b>' + resultado + '<br>';
 
-    document.write('<b>Resultado: </b>' + nombres);
+    modalBody.innerHTML += '<b>Resultado: </b>' + nombres;
 
 }
 

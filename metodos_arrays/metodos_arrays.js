@@ -1,4 +1,4 @@
-const modalBody = document.querySelector('.hola');
+const modalBody = document.querySelector('.resultado');
 
 let popTest = () =>{
     let nombres = ['pedro','paco','maria'];
@@ -12,6 +12,8 @@ let popTest = () =>{
     modalBody.innerHTML += '<b>Resultado: </b>' + nombres;
 
 }
+
+popTest();
 
 
 let shiftTest = () =>{

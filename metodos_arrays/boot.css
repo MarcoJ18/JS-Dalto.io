@@ -34,3 +34,6 @@ h1{
     transition: background .3s ease-in;
 }
 
+.resultado{
+    user-select: none;
+}

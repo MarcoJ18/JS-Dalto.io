@@ -37,3 +37,12 @@ h1{
 .resultado{
     user-select: none;
 }
+
+.ico {
+    cursor: pointer;
+
+}
+
+.ico:hover{
+    color: #ddd;
+}

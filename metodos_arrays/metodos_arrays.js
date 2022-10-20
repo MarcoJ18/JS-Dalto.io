@@ -1,3 +1,19 @@
+const copyText = document.querySelector('.ico');
+const title = document.querySelector('.span');
+
+
+copyText.addEventListener('click',()=>{
+  title.classList.remove(hidden);
+
+})
+
+
+
+
+
+
+
+
 const modalBody = document.querySelector('.resultado');
 
 let popTest = () =>{

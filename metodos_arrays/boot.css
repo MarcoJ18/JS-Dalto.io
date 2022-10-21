@@ -1,8 +1,10 @@
 h1{
     text-align: center;
 }
+
+
 .main {
-    border: 2px red solid;
+    /*border: 2px red solid;*/
     display: grid;
     grid-template-columns: repeat(auto-fill,23%);
     text-align: center;
@@ -10,7 +12,6 @@ h1{
     padding: 5%;
  
  }
-
  .main .main_pop{
     padding: 10px;
     border-radius: 10px;
@@ -45,4 +46,8 @@ h1{
 
 .ico:hover{
     color: #ddd;
+}
+
+.span {
+    display: none;
 }

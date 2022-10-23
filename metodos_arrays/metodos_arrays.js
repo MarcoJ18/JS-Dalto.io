@@ -1,20 +1,3 @@
-const copyText = document.querySelector('.ico');
-
-copyText.addEventListener('click',()=>{
-    
-   copyText.setAttribute('title','hola');
-      
-})
-
-
-
-
-
-
-
-
-
-
 const modalBody = document.querySelector('.resultado');
 
 let popTest = () =>{
@@ -30,7 +13,109 @@ let popTest = () =>{
 
 }
 
-popTest();
+
+const respuesta = document.querySelector('.respuesta');
+const img = document.querySelector('.img-pop');
+const modalContainer = document.querySelector('.scroll');
+const closeReload = document.querySelectorAll('.btn-cerrar');
+
+
+const showResult = ()=>{
+    img.style.opacity = '1';
+    img.style.cursor = 'default';
+    respuesta.innerHTML = 'Resultado<hr>';
+    popTest();
+}
+
+let count = 0;
+
+img.addEventListener('click',()=>{
+    count++;
+    if (count == 1) {
+        showResult();
+        modalContainer.scrollTo(0,1000);
+    }
+})
+
+closeReload[0].addEventListener('click',()=>{
+    location.reload(true);
+})
+closeReload[1].addEventListener('click',()=>{
+    location.reload(true);
+})
+
+//Clickboard the code 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 let shiftTest = () =>{

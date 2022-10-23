@@ -51,3 +51,12 @@ h1{
 .span {
     display: none;
 }
+
+.img-pop{
+    max-width:100%;
+    cursor: pointer;
+}
+
+.img-pop:hover{
+    opacity: .5;
+}

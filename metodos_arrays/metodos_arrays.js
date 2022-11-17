@@ -1,3 +1,5 @@
+//The code where i copy
+
 const modalBody = document.querySelector('.resultado');
 
 let popTest = () =>{
@@ -13,13 +15,38 @@ let popTest = () =>{
 
 }
 
-
+//All const necessary to popup
 const respuesta = document.querySelector('.respuesta');
 const img = document.querySelector('.img-pop');
 const modalContainer = document.querySelector('.scroll');
 const closeReload = document.querySelectorAll('.btn-cerrar');
 
 
+//Clickboard the code
+const copyText = () => {
+    let input = document.createElement('input');
+    input.value = `const modalBody = document.querySelector('.resultado');
+
+    let popTest = () =>{
+        let nombres = ['pedro','paco','maria'];
+    
+        modalBody.innerHTML += '<b>Original: </b>' + nombres + '<br>';
+    
+        let resultado = nombres.pop(); // Remueve el ultimo y lo devuele
+    
+        modalBody.innerHTML += '<b>POP: </b>' + resultado + '<br>';
+    
+        modalBody.innerHTML += '<b>Resultado: </b>' + nombres;
+    
+    }`;
+    document.body.appendChild(input);
+    input.select();
+    navigator.clipboard.writeText(input.value);
+    document.body.removeChild(input);
+};
+
+
+//Show the code in the page
 const showResult = ()=>{
     img.style.opacity = '1';
     img.style.cursor = 'default';
@@ -32,6 +59,7 @@ let count = 0;
 img.addEventListener('click',()=>{
     count++;
     if (count == 1) {
+        copyText();
         showResult();
         modalContainer.scrollTo(0,1000);
     }
@@ -44,7 +72,8 @@ closeReload[1].addEventListener('click',()=>{
     location.reload(true);
 })
 
-//Clickboard the code 
+
+
 
 
 

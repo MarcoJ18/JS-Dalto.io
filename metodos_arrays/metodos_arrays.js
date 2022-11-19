@@ -1,3 +1,4 @@
+'use strict';
 //The code where i copy
 
 const modalBody = document.querySelector('.resultado');
@@ -15,6 +16,20 @@ let popTest = () =>{
 
 }
 
+let shiftTest = () =>{
+    let nombres = ['pedro','paco','maria'];
+
+    document.write('<b>Original: </b>' + nombres + '<br>');
+
+    let resultado = nombres.shift(); // Remueve el primero y lo devuele
+
+    document.write('<b>Shift: </b>' + resultado + '<br>');
+
+    document.write('<b>Resultado: </b>' + nombres);
+
+}
+
+
 //All const necessary to popup
 const respuesta = document.querySelector('.respuesta');
 const img = document.querySelector('.img-pop');
@@ -24,9 +39,9 @@ const closeReload = document.querySelectorAll('.btn-cerrar');
 
 //Clickboard the code
 const copyText = () => {
-    let input = document.createElement('input');
-    input.value = `const modalBody = document.querySelector('.resultado');
-
+    let textarea = document.createElement('textarea');
+    textarea.value = `
+    const modalBody = document.querySelector('.resultado');
     let popTest = () =>{
         let nombres = ['pedro','paco','maria'];
     
@@ -39,10 +54,10 @@ const copyText = () => {
         modalBody.innerHTML += '<b>Resultado: </b>' + nombres;
     
     }`;
-    document.body.appendChild(input);
-    input.select();
-    navigator.clipboard.writeText(input.value);
-    document.body.removeChild(input);
+    document.body.appendChild(textarea);
+    textarea.select();
+    navigator.clipboard.writeText(textarea.value);
+    document.body.removeChild(textarea);
 };
 
 
@@ -146,19 +161,6 @@ closeReload[1].addEventListener('click',()=>{
 
 
 
-
-let shiftTest = () =>{
-    let nombres = ['pedro','paco','maria'];
-
-    document.write('<b>Original: </b>' + nombres + '<br>');
-
-    let resultado = nombres.shift(); // Remueve el primero y lo devuele
-
-    document.write('<b>Shift: </b>' + resultado + '<br>');
-
-    document.write('<b>Resultado: </b>' + nombres);
-
-}
 
 
 let pushTest = () =>{  

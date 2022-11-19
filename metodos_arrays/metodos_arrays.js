@@ -16,20 +16,6 @@ let popTest = () =>{
 
 }
 
-let shiftTest = () =>{
-    let nombres = ['pedro','paco','maria'];
-
-    document.write('<b>Original: </b>' + nombres + '<br>');
-
-    let resultado = nombres.shift(); // Remueve el primero y lo devuele
-
-    document.write('<b>Shift: </b>' + resultado + '<br>');
-
-    document.write('<b>Resultado: </b>' + nombres);
-
-}
-
-
 //All const necessary to popup
 const respuesta = document.querySelector('.respuesta');
 const img = document.querySelector('.img-pop');
@@ -154,7 +140,18 @@ closeReload[1].addEventListener('click',()=>{
 
 
 
+let shiftTest = () =>{
+    let nombres = ['pedro','paco','maria'];
 
+    document.write('<b>Original: </b>' + nombres + '<br>');
+
+    let resultado = nombres.shift(); // Remueve el primero y lo devuele
+
+    document.write('<b>Shift: </b>' + resultado + '<br>');
+
+    document.write('<b>Resultado: </b>' + nombres);
+
+}
 
 
 

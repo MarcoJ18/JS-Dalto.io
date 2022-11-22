@@ -16,15 +16,55 @@ let popTest = () =>{
 
 }
 
+
+let shiftTest = () =>{
+    let nombres = ['pedro','paco','maria'];
+
+    modalBody.innerHTML += '<b>Original: </b>' + nombres + '<br>';
+
+    let resultado = nombres.shift(); // Remueve el primero y lo devuele
+
+    modalBody.innerHTML += '<b>Shift: </b>' + resultado + '<br>';
+
+    modalBody.innerHTML += '<b>Resultado: </b>' + nombres;
+
+}
+
+
+
 //All const necessary to popup
 const respuesta = document.querySelector('.respuesta');
 const img = document.querySelector('.img-pop');
 const modalContainer = document.querySelector('.scroll');
 const closeReload = document.querySelectorAll('.btn-cerrar');
 
+const img2 = document.querySelector('.img-shift'); 
+
 
 //Clickboard the code
 const copyText = () => {
+    let textarea = document.createElement('textarea');
+    textarea.value = `
+    const modalBody = document.querySelector('.resultado');
+    let popTest = () =>{
+        let nombres = ['pedro','paco','maria'];
+    
+        modalBody.innerHTML += '<b>Original: </b>' + nombres + '<br>';
+    
+        let resultado = nombres.pop(); // Remueve el ultimo y lo devuele
+    
+        modalBody.innerHTML += '<b>POP: </b>' + resultado + '<br>';
+    
+        modalBody.innerHTML += '<b>Resultado: </b>' + nombres;
+    
+    }`;
+    document.body.appendChild(textarea);
+    textarea.select();
+    navigator.clipboard.writeText(textarea.value);
+    document.body.removeChild(textarea);
+};
+
+const copyText2 = () => {
     let textarea = document.createElement('textarea');
     textarea.value = `
     const modalBody = document.querySelector('.resultado');
@@ -55,6 +95,14 @@ const showResult = ()=>{
     popTest();
 }
 
+const showResult2 = ()=>{
+    img2.style.opacity = '1';
+    img2.style.cursor = 'default';
+    respuesta.innerHTML = 'Resultado<hr>';
+    shiftTest();
+}
+
+
 let count = 0;
 
 img.addEventListener('click',()=>{
@@ -74,6 +122,15 @@ closeReload[1].addEventListener('click',()=>{
 })
 
 
+let count2 = 0;
+img2.addEventListener('click',()=>{
+    count2++;
+    if (count2 == 1) {
+        copyText2();
+        showResult2();
+        modalContainer.scrollTo(0,1000);
+    }
+})
 
 
 
@@ -136,22 +193,6 @@ closeReload[1].addEventListener('click',()=>{
 
 
 
-
-
-
-
-let shiftTest = () =>{
-    let nombres = ['pedro','paco','maria'];
-
-    document.write('<b>Original: </b>' + nombres + '<br>');
-
-    let resultado = nombres.shift(); // Remueve el primero y lo devuele
-
-    document.write('<b>Shift: </b>' + resultado + '<br>');
-
-    document.write('<b>Resultado: </b>' + nombres);
-
-}
 
 
 

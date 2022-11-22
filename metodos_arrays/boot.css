@@ -52,11 +52,15 @@ h1{
     display: none;
 }
 
-.img-pop{
+img{
     max-width:100%;
     cursor: pointer;
 }
 
-.img-pop:hover{
+img:hover{
     opacity: .5;
+}
+
+.modal-title{
+    flex-grow: 1;  
 }

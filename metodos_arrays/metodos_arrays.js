@@ -1,17 +1,143 @@
-let popTest = () =>{
-    let nombres = ['pedro','paco','maria'];
+"use strict"
 
-    document.write('<b>Original: </b>' + nombres + '<br>');
 
-    let resultado = nombres.pop(); // Remueve el ultimo y lo devuele
 
-    document.write('<b>POP: </b>' + resultado + '<br>');
+class Metodos_arrays{
+    constructor(method){
+        this.method = method
+        this.result = document.getElementById('result');
+        
+    }
 
-    document.write('<b>Resultado: </b>' + nombres);
+
+    popTest = () => {
+        let nombres = ['pedro','paco','maria'];
+    
+        let data = ('<b>Original: </b>' + nombres + '<br>');
+    
+        let resultado = nombres.pop(); // Remueve el ultimo y lo devuele
+    
+        data += ('<b>POP: </b>' + resultado + '<br>');
+        data += ('<b>Resultado: </b>' + nombres);
+    
+        return data;
+    
+    }
+
+    shiftTest = () =>{
+        let nombres = ['pedro','paco','maria'];
+    
+        let data = ('<b>Original: </b>' + nombres + '<br>');
+    
+        let resultado = nombres.shift(); // Remueve el primero y lo devuele
+    
+        data += ('<b>Shift: </b>' + resultado + '<br>');
+    
+        data += ('<b>Resultado: </b>' + nombres);
+
+        return data;
+    
+    }
+
+    pushTest = () =>{  
+        let nombres = ['pedro','paco','maria'];
+    
+        let data = ('<b>Original: </b>' + nombres + '<br>');
+    
+        let resultado = nombres.push('test','pepe'); // Añade un elemento al final del array y nos devuelve la cantidad de elementos o la posición del ultimo elemento que agregamos
+    
+        data += ('<b>Push: </b>' + resultado + '<br>');
+    
+        data += ('<b>Resultado: </b>' + nombres);
+
+        return data;
+    
+    }
+    
+
+    getData(data,solve){
+        this.result.innerHTML = data;
+        this.result.innerHTML += `<span class="solve">${solve}</span>`;
+    }
 
 }
 
 
+
+
+function setModal(id,method){
+    id.addEventListener('click',()=>{
+    
+        window.dialog.showModal();
+        method();
+    
+    })
+    window.cerrar.addEventListener('click',()=>{
+        window.dialog.close();
+    })
+}
+
+
+let popF = new Metodos_arrays();
+let shiftF = new Metodos_arrays();
+let pushF = new Metodos_arrays();
+
+
+const all = {
+    pop: [
+        document.getElementById('pop'),
+        ()=> popF.getData(popF.popTest,popF.popTest())
+    ],
+    shift:[
+        document.getElementById('shift'),
+        ()=> shiftF.getData(shiftF.shiftTest,shiftF.shiftTest()) //encapsulamos funcion para se ejecute explisitamente cuando se llame 
+    ],
+    push: [
+        document.getElementById('push'),
+        ()=> pushF.getData(pushF.pushTest,pushF.pushTest())
+    ]
+
+}
+
+for (const i in all) {
+
+    setModal(all[i][0],all[i][1]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//const result = document.getElementById('result');
+//const pop = document.getElementById('pop');
+
+/*function modal(id) {
+    
+    id.addEventListener('click',()=>{
+        window.dialog.showModal();
+    })
+    window.cerrar.addEventListener('click',()=>{
+        window.dialog.close();
+    })
+} */
+
+
+
+
+//result.innerHTML = popTest;
+//result.innerHTML += popTest();
+
+/*
 let shiftTest = () =>{
     let nombres = ['pedro','paco','maria'];
 

@@ -61,3 +61,38 @@ h1{
 .main div:nth-child(7){
     background-color:seagreen;
 }
+
+
+dialog{
+    width: 50%;
+    max-height: 100vh;
+    background-color: wheat;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+    padding: 2rem;
+    box-shadow: 1px 2px 3px black;
+}
+
+dialog #result{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+dialog .solve{
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 5px 5px black;
+    color: black;
+    margin: 50px 30px;
+    padding: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}

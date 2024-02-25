@@ -13,17 +13,21 @@
     <!--<button onclick="popA()">Click</button>-->
 <h1>Transformadores</h1>
 <div class="main">
+    <dialog id="dialog">
+        <p id="result"></p>
+        <button id="cerrar">cerrar</button>
+    </dialog>
     <div>
         <h1>Pop</h1>
-        <button onclick="popTest()">Example</button>
+        <button id="pop"">Example</button>
     </div>
     <div>
         <h1>Shift</h1>
-        <button onclick="shiftTest()">Example</button>
+        <button id="shift"">Example</button>
     </div>
     <div>
         <h1>Push</h1>
-        <button onclick="pushTest()">Example</button>
+        <button id="push">Example</button>
     </div>
     <div>
         <h1>Reverse</h1>
@@ -75,6 +79,7 @@
     </div>
 </div>
 
-<script src="metodos_arrays.js"></script> <!--Es mejor ponerlo al final ya que asi carga primero la pagina y luego el script-->
+<script type="module" src="metodos_arrays.js"></script> <!--Es mejor ponerlo al final ya que asi carga primero la pagina y luego el script-->
+
 </body>
 </html> 
